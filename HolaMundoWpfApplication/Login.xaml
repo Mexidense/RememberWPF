@@ -18,12 +18,12 @@
             <RowDefinition Height="35*"></RowDefinition>
             <RowDefinition Height="35*"></RowDefinition>            
         </Grid.RowDefinitions>
-        <Label Content="Login" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Content="Usuario" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="70"/>
-        <Label Content="Contraseña" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="70" />
+        <Label Content="Login" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Top" Grid.ColumnSpan="2" Style="{StaticResource headerTextStyle}"/>
+        <Label Content="Usuario" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="70" Style="{StaticResource labelStyle}"/>
+        <Label Content="Contraseña" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="70" Style="{StaticResource labelStyle}"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,0,30,0" Height="23" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,0,30,0" Height="23" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="74" Height="22"/>
-        <Button Content="Buton" HorizontalAlignment="Center" Margin="0" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="74" Height="22"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource okButtonStyle}"/>
+        <Button Content="Buton" HorizontalAlignment="Center" Margin="0" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource cancelButtonStyle}"/>
     </Grid>
 </Window>
