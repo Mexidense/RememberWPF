@@ -23,6 +23,12 @@ namespace HolaMundoWpfApplication
         public MainWindow()
         {
             InitializeComponent();
+            this.Closed += MainWindow_Closed;
+        }
+
+        void MainWindow_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
