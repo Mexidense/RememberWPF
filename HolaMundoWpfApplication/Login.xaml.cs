@@ -23,5 +23,14 @@ namespace HolaMundoWpfApplication
         {
             InitializeComponent();
         }
+
+        private void OkButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(string.Format("Hola {0} ", usuarioTextBox.Text));
+        }
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
