@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HolaMundoWpfApplication"
         mc:Ignorable="d"
-        Title="Hola Mundo" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Main window" Height="350" Width="525">
+        <DockPanel Width="Auto" Height="Auto" LastChildFill="True">
+        <!-- Área del Menu superior-->
+            <Menu Width="Auto" Height="20" Background="#FFA9D1F4" DockPanel.Dock="Top">
+                <!-- Menu Archivo -->
+                <MenuItem Header="Archivo">
+                    <MenuItem Header="Guardar"/>
+                    <Separator/>
+                    <MenuItem Header="Salir"/>
+                </MenuItem>
+                <!-- Menu Usuario -->
+                <MenuItem Header="Usuario">
+                    <MenuItem Header="Cambiar Palabra de Paso"/>
+                </MenuItem>
+                <!-- Menu Acerca de ...-->
+                <MenuItem Header="Ayuda">
+                    <MenuItem Header="Acerca de ... "/>
+                </MenuItem>
+            </Menu>
+            <!--Area de estado en el fondo de la ventana, se declara antes para despues rellenar el resto de la ventana con un Grid -->
+            <StackPanel Width="Auto" Height="31" Background="#FFCAC5C5" Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <Label Width="155" Height="23" Content="Barra de Estado ..." FontFamily="Arial" FontSize="10"/>
+            </StackPanel>
+            <Grid>
+            </Grid>
+        </DockPanel>
 </Window>
