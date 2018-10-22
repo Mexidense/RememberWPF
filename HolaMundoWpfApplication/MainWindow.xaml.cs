@@ -30,5 +30,11 @@ namespace HolaMundoWpfApplication
         {
             Application.Current.Shutdown();
         }
+
+        private void CambiarPalabraDePasoUsuarioMenu_Click(object sender, RoutedEventArgs e)
+        {
+            CambiarPalabraPaso cambiarPalabraPaso = new CambiarPalabraPaso();
+            cambiarPalabraPaso.ShowDialog();
+        }
     }
 }

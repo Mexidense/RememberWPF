@@ -17,7 +17,7 @@
                 </MenuItem>
                 <!-- Menu Usuario -->
                 <MenuItem Header="Usuario">
-                    <MenuItem Header="Cambiar Palabra de Paso"/>
+                    <MenuItem Click="CambiarPalabraDePasoUsuarioMenu_Click" Header="Cambiar Palabra de Paso"/>
                 </MenuItem>
                 <!-- Menu Acerca de ...-->
                 <MenuItem Header="Ayuda">

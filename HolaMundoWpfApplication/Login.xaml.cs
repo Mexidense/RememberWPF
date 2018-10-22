@@ -40,6 +40,8 @@ namespace HolaMundoWpfApplication
                     this.Hide();
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.Show();
+                    UsuarioActivo.Nombre = nombreUsuario;
+                    UsuarioActivo.PalabraDePaso = palabraDePaso;
                 }
                 else
                 {
