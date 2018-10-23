@@ -3,9 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HolaMundoWpfApplication"
+        xmlns:local="clr-namespace:HolaMundoWpfApplication.Model;assembly="
         mc:Ignorable="d"
         Title="Hola Mundo - Login" Height="175" Width="450">
+    <Window.Resources>
+        <local:UsuariosModel x:Key="ListaUsuarios">
+            <local:UsuarioModel Nombre="Iker" PalabraDePaso ="Casillas" />
+        </local:UsuariosModel>
+    </Window.Resources>
     <Grid HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="235*"></ColumnDefinition>
@@ -21,9 +26,10 @@
         <Label Content="Login" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Top" Grid.ColumnSpan="2" Style="{StaticResource headerTextStyle}"/>
         <Label Content="Usuario" HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="70" Style="{StaticResource labelStyle}"/>
         <Label Content="Palabra de paso" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="70" Style="{StaticResource labelStyle}"/>
-        <TextBox Name="usuarioTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,0,30,0" Height="23" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox Name="palabraDePasoTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,0,30,0" Height="23" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <Button Content="Button" Click="OkButton_Click" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource okButtonStyle}"/>
-        <Button Content="Buton" Click="CancelButton_Click"  HorizontalAlignment="Center" Margin="0" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource cancelButtonStyle}"/>
+        <ComboBox Name="usuariosComboBox" ItemsSource="{StaticResource ResourceKey=ListaUsuarios}" DisplayMemberPath="Nombre" SelectedValuePath="Nombre" Grid.Row="0" Grid.Column="1" Margin="30,0,30,0" Height="22" SelectionChanged="usuariosComboBox_SelectionChanged"/>
+        <TextBox Name="usuarioTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Margin="30,0,30,0" Height="23" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding ElementName=usuariosComboBox, Path=SelectedValue}"/>
+        <TextBox Name="palabraDePasoTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Margin="30,0,30,0" Height="23" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Ok" Click="OkButton_Click" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource okButtonStyle}"/>
+        <Button Content="Cancel" Click="CancelButton_Click"  HorizontalAlignment="Center" Margin="0" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" Width="74" Height="22" Style="{StaticResource cancelButtonStyle}"/>
     </Grid>
 </Window>

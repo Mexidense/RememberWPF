@@ -24,12 +24,12 @@ namespace HolaMundoWpfApplication
         public Login()
         {
             InitializeComponent();
-            _usuarios = new UsuariosModel();
+            _usuarios = (UsuariosModel) FindResource("ListaUsuarios");
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            string nombreUsuario = usuarioTextBox.Text;
+            string nombreUsuario = usuariosComboBox.SelectedItem.ToString();
             string palabraDePaso = palabraDePasoTextBox.Text;
             string password;
             if(TryGetValue(nombreUsuario, out password))
@@ -72,6 +72,11 @@ namespace HolaMundoWpfApplication
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void usuariosComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //usuarioTextBox.Text = usuariosComboBox.SelectedValue.ToString();
         }
     }
 }
