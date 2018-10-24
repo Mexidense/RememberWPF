@@ -36,5 +36,11 @@ namespace HolaMundoWpfApplication
             CambiarPalabraPaso cambiarPalabraPaso = new CambiarPalabraPaso();
             cambiarPalabraPaso.ShowDialog();
         }
+
+        private void AcercaDeMenu_Click(object sender, RoutedEventArgs e)
+        {
+            AcercaDe acercaDe = new AcercaDe();
+            acercaDe.ShowDialog();
+        }
     }
 }

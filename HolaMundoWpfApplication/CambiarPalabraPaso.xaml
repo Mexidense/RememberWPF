@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HolaMundoWpfApplication"
         mc:Ignorable="d"
-        Title="CambiarPalabraPaso" Height="200" Width="300">
+        Title="CambiarPalabraPaso" Height="230" Width="300">
     <Grid HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="235*"></ColumnDefinition>

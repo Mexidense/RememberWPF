@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HolaMundoWpfApplication"
+        local:BarraEstadoDependencyProperty.EsAplicadaBarraEstado="true"
         mc:Ignorable="d"
         Title="Main window" Height="350" Width="525">
         <DockPanel Width="Auto" Height="Auto" LastChildFill="True">
@@ -21,7 +22,7 @@
                 </MenuItem>
                 <!-- Menu Acerca de ...-->
                 <MenuItem Header="Ayuda">
-                    <MenuItem Header="Acerca de ... "/>
+                    <MenuItem Click="AcercaDeMenu_Click" Header="Acerca de ... "/>
                 </MenuItem>
             </Menu>
             <!--Area de estado en el fondo de la ventana, se declara antes para despues rellenar el resto de la ventana con un Grid -->

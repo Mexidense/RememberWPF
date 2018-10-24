@@ -29,7 +29,7 @@ namespace HolaMundoWpfApplication
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            string nombreUsuario = usuariosComboBox.SelectedItem.ToString();
+            string nombreUsuario = usuarioTextBox.Text;
             string palabraDePaso = palabraDePasoTextBox.Text;
             string password;
             if(TryGetValue(nombreUsuario, out password))
